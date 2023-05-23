@@ -4,10 +4,10 @@ import { Camera } from 'expo-camera';
 import { BarCodeScanner } from 'expo-barcode-scanner';
 
 const BarcodeScannerScreen = () => {
-  const [hasPermission, setHasPermission] = useState(null);
-  const [zoom, setZoom] = useState(0);
-  const [selectedImage, setSelectedImage] = useState(null);
-  const cameraRef = useRef(null);
+    const [hasPermission, setHasPermission] = useState(null);
+    const [zoom, setZoom] = useState(0);
+    const [selectedImage, setSelectedImage] = useState(null);
+    const cameraRef = useRef(null);
 
   useEffect(() => {
     (async () => {
@@ -22,11 +22,11 @@ const BarcodeScannerScreen = () => {
     }
   };
 
-  const handleZoomOut = () => {
+const handleZoomOut = () => {
     if (zoom > 0) {
-      setZoom(z => z - 0.1);
+        setZoom(z => z - 0.1);
     }
-  };
+};
 
   const handleBarCodeScanned = ({ data }) => {
     console.log('Barcode:', data);
